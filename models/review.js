@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // Creating our Review model
 module.exports = function(sequelize, DataTypes) {
   var Review = sequelize.define("Review", {
@@ -39,6 +40,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-  
+
   return Review;
 };
