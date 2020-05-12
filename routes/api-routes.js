@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -16,6 +17,8 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     db.User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password
     })
@@ -33,6 +36,24 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
+  app.post("/api/members", function(req, res) {
+    db.Review.create({
+      UserId: req.user.id,
+      coffeeCategory: req.body.coffeeCategory,
+      coffeeName: req.body.coffeeName,
+      rating: req.body.rating,
+      coffeeReview: req.body.coffeeReview
+    })
+      .then(function(data) {
+        res.json(data);
+        console.log(data);
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+        console.log(err);
+      });
+  });
+
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
@@ -42,7 +63,7 @@ module.exports = function(app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
-        email: req.user.email,
+        firstName: req.user.firstName,
         id: req.user.id
       });
     }
