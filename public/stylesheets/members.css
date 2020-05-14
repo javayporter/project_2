@@ -21,9 +21,15 @@ button {
     font-size: medium;
 }
 
-h1 {
+h2 {
     text-align: center;
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
 
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive; 
 }
 
 .whiteText{
