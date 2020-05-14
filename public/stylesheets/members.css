@@ -23,6 +23,16 @@ button {
 
 h1 {
     text-align: center;
+
+}
+
+.whiteText{
+    color: white;
+}
+
+.jumbotronImg {
+    background-image: url("/Users/javayporter/project_2/public/assets/img/starbucks-color-changing-cups-today-main-190502_7c789065eadd351820f47681c9c7aad2.fit-760w.jpg");
+    background-size: cover;
 }
 /* .center2{ 
     height:20px; 
