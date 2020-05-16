@@ -1,0 +1,31 @@
+{{#each reviews}}
+  <div class='card mb-3' style='max-width: 540px;float: left;'>
+    <div class='row no-gutters'>
+      <div class='col-md-2'>
+        <img id='coffeeImg' src='/assets/img/coffee-mug.png'>
+      </div>
+      <div class='col-md-10'>
+        <div class='card-body'>
+          <h4 class='card-title'>
+            {{this.categoryName}}
+          </h4>
+          <h5>
+            {{this.coffeeName}}
+          </h5>
+          <p class='card-text'>Rating: <span>
+              {{this.rating}}
+            </span>
+          </p>
+          <p class='card-text'>
+            {{this.coffeeReview}}
+          </p>
+          <p class='card-text'><small class='text-muted'>Last updated by: <span>
+                review.User.firstName,
+                <br>
+                review.updatedAt,
+              </span></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}

@@ -39,8 +39,8 @@ module.exports = function(app) {
   app.post("/api/members", function(req, res) {
     db.Review.create({
       UserId: req.user.id,
-      coffeeCategory: req.body.coffeeCategory,
-      coffeeName: req.body.coffeeName,
+      CategoryId: req.body.coffeeCategoryId,
+      CoffeeId: req.body.coffeeNameId,
       rating: req.body.rating,
       coffeeReview: req.body.coffeeReview
     })
@@ -55,7 +55,7 @@ module.exports = function(app) {
   });
   app.get("/api/reviews", function(req, res) {
     db.Review.findAll({
-      include: [db.User]
+      include: [db.Category, db.Coffee, db.User]
     }).then(function(dbReviews) {
       res.json(dbReviews);
     });
