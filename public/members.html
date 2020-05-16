@@ -15,15 +15,24 @@
     <div class="jumbotron">
       <h1>Coffee Express</h1>
       <h2>Welcome <span class="member-name"></span></h2>
+      <hr>
+      <a href="/"><button class="btn btn-danger btn-sm"><spanclass=""></span>Home</button></a>
+      <a><button id= "allRating" class="btn btn-danger btn-sm"><span class=""></span> View All Rating</button></a>
+      <a href="/login"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span> Review Coffee</button></a>
+      <a href="/logout"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Logout</button></a>
+    </div>
+    <!-- <div class="jumbotron">
+      <h1>Coffee Express</h1>
+      <h2>Welcome <span class="member-name"></span></h2>
       <a class="navbar-brand" href="/logout">
         Logout
       </a>
       <hr>
-      <a><button id= "addNew" class="btn btn-danger btn-lg"><span class=""></span> Add New
+      <a><button id= "addNew" class="btn btn-danger btn-sm"><span class=""></span> Add New
           </button></a>
-      <a><button id="allRating" class="btn btn-danger btn-lg"><span
+      <a><button id="allRating" class="btn btn-danger btn-sm"><span
             class=""></span> View All Rating</button></a>
-    </div>
+    </div> -->
 
     <div id="ratingCards" class="card-group">
 
@@ -37,8 +46,8 @@
               <option value="Cold Coffee">Hot Coffee</option>
               <option value="Hot Coffee">Iced Coffee</option>
               <option value="Esspereso">Espresso</option>
-              <option value="Esspereso">Frappuccino</option>
-              <option value="Esspereso">Macchiato</option>
+              <option value="Frappuccino">Frappuccino</option>
+              <option value="Macchiato">Macchiato</option>
             </select>
           </div>
           <div class="form-group">
@@ -61,7 +70,7 @@
             <label for="body">Coffee Review:</label>
             <textarea class="form-control" rows="10" id="main-review"></textarea>
             <br />
-            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>  
+            <button type="submit" class="btn btn-danger submit btn-sm">Submit</button>  
           </div>
 
         </form>

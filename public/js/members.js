@@ -60,6 +60,7 @@ $(document).ready(function() {
 
   // This function resets the reviews to displayed new reviews from the database
   function initializeRows() {
+    reviewsContainer.empty();
     var rowsToAdd = [];
     for (var i = 0; i < reviews.length; i++) {
       rowsToAdd.push(createNewRow(reviews[i]));
@@ -78,12 +79,12 @@ $(document).ready(function() {
   function createNewRow(review) {
     var newInputRow = $(
       [
-        "<div class='card mb-3' style='max-width: 540px;float: right;'>",
+        "<div class='card mb-3' style='max-width: 540px;float: left;'>",
         "<div class='row no-gutters'>",
-        "<div class='col-md-4'>",
-        "<img id='coffeeImg' src='{{ asset('public/assets/img/frappuccino.JPG') }}'>",
+        "<div class='col-md-2'>",
+        "<img id='coffeeImg' src='/assets/img/coffee-mug.png'>",
         "</div>",
-        "<div class='col-md-8'>",
+        "<div class='col-md-10'>",
         "<div class='card-body'>",
         "<h4 class='card-title'>",
         review.coffeeCategory,
@@ -109,10 +110,38 @@ $(document).ready(function() {
         "</div>"
       ].join("")
     );
-    if (review.coffeeCategory === "Iced Coffee") {
-      $("#coffeeImg").css("src","public/assets/img/iced-coffee.jpg");
-
-    }
+    // switch (review.coffeeCategory) {
+    // case "Iced Coffee":
+    //   $(img).attr("src","/assets/img/iced-coffee.jpg");
+    //   break;
+    // case "Hot Coffee":
+    //   $("img").attr("src","/assets/img/hot-coffee.jpg");
+    //   break;
+    // case "Espresso":
+    //   $("img").attr("src","/assets/img/espresso.jpg");
+    //   break;
+    // case "Frappuccino":
+    //   $("img").attr("src","/assets/img/frappuccino.jpg");
+    //   break;
+    // case "Macchiato":
+    //   $("img").attr("src","/assets/img/macchiato.jpg");
+    //   break;
+    // default:
+    //   $("img").attr("src","/assets/img/coffee-img.jpg");
+    // }
+    // if (review.coffeeCategory ==="Iced Coffee") {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/espresso.jpg')");
+    // } else if (review.coffeeCategory === "Hot Coffee") {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/hot-coffee.jpg')");
+    // } else if (review.coffeeCategory === "Espresso") {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/espresso.jpg')");
+    // } else if (review.coffeeCategory === "Frappuccino") {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/espresso.jpg')");
+    // } else if (review.coffeeCategory === "Macchiato") {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/macchiato.jpg')");
+    // } else {
+    //   $("#coffeeImg").css("background-image","url('/assets/img/coffee-img.jpg')");
+    // }
     reviewsContainer.append(newInputRow);
   }
 });

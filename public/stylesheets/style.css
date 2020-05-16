@@ -2,12 +2,40 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-#coffeeImg {
-  src: 'public/assets/img/coffee-img.jpg';
-}
-/* img {
-  src: url('public\assets\img\coffee-img.jpg');
+h2 {
+  color: antiquewhite;
 }
 .jumbotron {
-  background-image: url(public/assets/img/frappuccino.JPG);
-} */
+  background-image: url("/assets/img/macchiato.jpg");
+  /* background-size: cover; */
+  border-radius: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  width: 33.33%;
+}
+
+#coffeeImg {
+  margin: 10px;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.btn {
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+  .card {
+    width: 100%;
+  }
+  #coffeeImg {
+    margin: 20px;
+    width: 40%;
+    height: 40%;
+  }
+
+}

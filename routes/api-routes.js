@@ -61,17 +61,6 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/reviews", function(req, res) {
-  //   db.Review.findAll({}).then(function() {
-  //     res.json({
-  //       coffeeCategory: req.coffeeCategory,
-  //       coffeeName: req.coffeeName,
-  //       rating: req.rating,
-  //       coffeeReview: req.coffeeReview
-  //     });
-  //   });
-  // });
-
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
