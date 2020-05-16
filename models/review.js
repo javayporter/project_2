@@ -2,21 +2,6 @@
 // Creating our Review model
 module.exports = function(sequelize, DataTypes) {
   var Review = sequelize.define("Review", {
-
-    coffeeCategory: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    coffeeName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -33,6 +18,18 @@ module.exports = function(sequelize, DataTypes) {
 
   Review.associate = function(models) {
     Review.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
+    Review.belongsTo(models.Category, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
+    Review.belongsTo(models.Coffee, {
       foreignKey: {
         allowNull: false
       }
