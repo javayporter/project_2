@@ -26,14 +26,16 @@ function getDrinks() {
     //         option.text(reviews[i]);
     //         firstOption.append(option);
     //     }
-    // },
+    // }
+           
 
     var fdDiv = $("#drinkCatDropDown");
+    var partOne = "<a class=\"dropdown-item\">";
 
     for (var i=0; i < reviews.length; i++) {
-      fdDiv.append("<div>" + reviews[i]);
-
+      fdDiv.append(partOne + reviews[i] + "</a> <br>");
     }
+    fdDiv.append("</div>");
   });
 }
 getDrinks();
