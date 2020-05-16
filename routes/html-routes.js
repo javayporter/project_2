@@ -36,6 +36,17 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/location.html"));
   });
 
+  app.get("/reviews", async function(req, res) {
+    let reviewData = await db.Review.findAll({
+      include: [db.Category, db.Coffee, db.User]
+    });
+    let reviews = reviewData.map(function(item) {
+      return { id: item.id, rating: item.rating, coffeeReview: item.coffeeReview, categoryName: item.Category.name, coffeeName: item.Coffee.name };
+    });
+
+    res.render("reviews", { reviews: reviews });
+  });
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members",/* isAuthenticated,*/ async function(req, res) {

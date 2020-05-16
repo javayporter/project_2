@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Getting references to our form, input click events
   var signUpForm = $("form.review");
   var category = $("#category");
-  var kindOfCoffee = $("input#kindOfCoffee");
+  var coffeeName = $("#coffeeName");
   var ratingInput= $("#rating-input");
   var mainReview = $("textarea#main-review");
   var allRating = $("#allRating");
@@ -16,8 +16,8 @@ $(document).ready(function() {
 
     // Constructing a newPost object to hand to the database
     var newPost = {
-      coffeeCategory: category.val(),
-      coffeeName: kindOfCoffee.val().trim(),
+      coffeeCategoryId: category.val(),
+      coffeeNameId: coffeeName.val(),
       rating: ratingInput.val(),
       coffeeReview: mainReview.val().trim()
     };
@@ -27,7 +27,7 @@ $(document).ready(function() {
     }
 
     category.val(""),
-    kindOfCoffee.val(""),
+    coffeeName.val(""),
     ratingInput.val(""),
     mainReview.val("");
     // eslint-disable-next-line no-use-before-define
@@ -51,7 +51,7 @@ $(document).ready(function() {
   });
 
   //Initiating get review
-  $(allRating).on("click", getReviews);
+//  $(allRating).on("click", getReviews);
 
 
   // Our initial review array
