@@ -5,9 +5,7 @@ form.login {
 #coffeeImg {
   src: 'public/assets/img/coffee-img.jpg';
 }
-/* img {
-  src: url('public\assets\img\coffee-img.jpg');
+
+.navbar-brand {
+  text-align: right;
 }
-.jumbotron {
-  background-image: url(public/assets/img/frappuccino.JPG);
-} */
