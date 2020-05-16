@@ -10,6 +10,10 @@ h2 {
   /* background-size: cover; */
   border-radius: 20px;
 }
+#map {
+  height: 500px;
+  width: 500px;
+}
 
 .card {
   margin-bottom: 20px;

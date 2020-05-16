@@ -1,4 +1,6 @@
-$(document).ready(function() {
+/* eslint-disable linebreak-style */
+/* eslint-disable no-use-before-define */
+$(document).ready(function () {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
   var firstNameInput = $("input#firstName-input");
@@ -7,7 +9,7 @@ $(document).ready(function() {
   var passwordInput = $("input#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
+  signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
       firstName: firstNameInput.val().trim(),
@@ -36,7 +38,7 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function(data) {
+      .then(function () {
         window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
