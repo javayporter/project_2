@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+
+.navbar  {
+    
+
+         background-image: url("./assets/img/starbucks.jpg") !important;
+         background-size: contain;
+         
+        }
+
         #map {
             height: 400px;
             /* The height is 400 pixels */
@@ -14,42 +23,70 @@
             /* The width is the width of the web page */
         }
 
-        #image {
-            background-image: url("./assets/imag/starbucks-header.jpg") !important;
-            background-size: contain;
-        }
-
+       /* #cityname {
+        background-image: url("./assets/img/starbucks-header.jpg") !important;
+         
+        } */
+        
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
 </head>
 
 <body>
 
-    <nav id="image" class="navbar navbar-expand-lg navbar-light bg-warning text-dark">
-        <a class="navbar-brand" href="#">Group 5: Starbucks Location & Coffee Review</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <nav id="image" class="navbar navbar-expand-lg navbar-light bg-light text-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarFour">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/signup">sign up</a>
+              <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> sign up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">View all Rating</a>
+                <a class="nav-link" href="#"><i class="fas fa-smile"></i> View all Rating</a>
               </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Starbucks</button>
+            <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
+          </form>
+        </div>
+      </nav> -->
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light text-light">
+        <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarFour">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login <span class="sr-only text-dark">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> sign up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-smile"></i> View all Rating</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="search" class="btn btn-success" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
           </form>
         </div>
       </nav>
+      
 
 
     <!-- <h1 class="text-center text-primary">Group 5: Starbucks Location & Coffee Review</h1>
@@ -88,6 +125,7 @@
     </script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og">
     </script>
+    <script src="https://kit.fontawesome.com/540ce3f268.js" crossorigin="anonymous"></script>
     <script>
 
         $("#search").on("click", function () {
