@@ -23,11 +23,7 @@
             /* The width is the width of the web page */
         }
 
-       /* #cityname {
-        background-image: url("./assets/img/starbucks-header.jpg") !important;
-         
-        } */
-        
+  
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -35,8 +31,8 @@
 </head>
 
 <body>
-
-    <!-- <nav id="image" class="navbar navbar-expand-lg navbar-light bg-light text-dark">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark">
         <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,15 +50,18 @@
                 <a class="nav-link" href="#"><i class="fas fa-smile"></i> View all Rating</a>
               </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <div class="form-inline my-2 my-lg-0">
+          <!-- <form class="form-inline my-2 my-lg-0"> -->
             <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
-          </form>
+          <!-- </form> -->
         </div>
-      </nav> -->
+        </div>
+      </nav>
 
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light text-light">
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light text-light">
         <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -85,7 +84,7 @@
             <button id="search" class="btn btn-success" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
           </form>
         </div>
-      </nav>
+      </nav> -->
       
 
 
@@ -99,9 +98,7 @@
     <a href="/survey"><button id= "allRating" class="btn btn-danger btn-lg"><span
           class=""></span> View All Rating</button></a>
     </div> -->
-    <h2 id="cityname" class="display-6 text-center text-primary" >
-
-    </h2>
+    <h2 id="cityname" class="display-6 text-center text-primary" ></h2>
     <div id="map"></div>
     <table class="table">
 
@@ -123,9 +120,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og">
-    </script>
     <script src="https://kit.fontawesome.com/540ce3f268.js" crossorigin="anonymous"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og"></script>
+    </script>
+    
     <script>
 
         $("#search").on("click", function () {
