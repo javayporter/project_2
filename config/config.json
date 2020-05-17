@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "coffeeExpress_db",
-    "host": "127.0.0.1",
+    "username": "zgh2r2su2rzaw01r",
+    "password": "vqez3stqhesurqk4",
+    "database": "dhxak78jw4djryc8",
+    "host": "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "zgh2r2su2rzaw01r",
+    "password": "vqez3stqhesurqk4",
+    "database": "dhxak78jw4djryc8",
+    "host": "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "zgh2r2su2rzaw01r",
+    "password": "vqez3stqhesurqk4",
+    "database": "dhxak78jw4djryc8",
+    "host": "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
