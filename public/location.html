@@ -2,184 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-
-.navbar  {
-    
-
-         background-image: url("./assets/img/starbucks.jpg") !important;
-         background-size: contain;
-         
-        }
-
-        #map {
-            height: 400px;
-            /* The height is 400 pixels */
-            width: 100%;
-            /* The width is the width of the web page */
-        }
-
-       /* #cityname {
-        background-image: url("./assets/img/starbucks-header.jpg") !important;
-         
-        } */
-        
-    </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        
+  <title>Location</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
+  <div class="container">
 
-    <!-- <nav id="image" class="navbar navbar-expand-lg navbar-light bg-light text-dark">
-        <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarFour">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> sign up</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-smile"></i> View all Rating</a>
-              </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
-          </form>
-        </div>
-      </nav> -->
-
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light text-light">
-        <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Group 5: Starbucks Location & Coffee Review</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFour" aria-controls="navbarFour" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarFour">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login <span class="sr-only text-dark">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> sign up</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-smile"></i> View all Rating</a>
-              </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="search" class="btn btn-success" type="submit"><i class="fas fa-search"></i> Search Starbucks</button>
-          </form>
-        </div>
-      </nav>
-      
-
-
-    <!-- <h1 class="text-center text-primary">Group 5: Starbucks Location & Coffee Review</h1>
     <div class="jumbotron">
-        <input id="userlocation" type="text" />
-        
-        <button id="search" class="btn btn-primary">Search Starbucks</button>
-        <a href="/login"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Review Coffee
-        </button></a>
-    <a href="/survey"><button id= "allRating" class="btn btn-danger btn-lg"><span
-          class=""></span> View All Rating</button></a>
-    </div> -->
-    <h2 id="cityname" class="display-6 text-center text-primary" >
+      <h1>Coffee Express</h1>
+      <hr>
+      <a href="/"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span> Home</button></a>
+      <a href="/reviews"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span> View All
+          Rating</button></a>
+      <a href="/login"><button class="btn btn-danger btn-sm"><span></span> Review Coffee</button></a>
+      <a href="/signup"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span>SignUp</button></a>
+      <a href="/login"><button class="btn btn-danger btn-sm"><span></span>Login</button></a>
+    </div>
 
-    </h2>
-    <div id="map"></div>
-    <table class="table">
+    <div class="form-inline my-2 my-lg-0">
+      <input id="userlocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button id="search" class="btn btn-success" type="submit"><i class="fas fa-search"></i> Search
+        Starbucks</button>
+    </div>
 
-        <thead class="thead-dark">
+    <div class="row">
+      <div class="col-md-6" id="map">
+
+      </div>
+      <div class="col-md-6">
+        <h4 id="cityname" class="display-6 text-center text-primary"></h4>
+        <table class="table">
+          <thead class="thead-dark">
             <tr>
-                <th scope="col">Location</th>
-                <th scope="col">Rating</th>
+              <th scope="col">Location</th>
+              <th scope="col">Rating</th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
 
-        </tbody>
-    </table>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+      </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+      </script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og">
     </script>
     <script src="https://kit.fontawesome.com/540ce3f268.js" crossorigin="anonymous"></script>
-    <script>
-
-        $("#search").on("click", function () {
-            var location = $("#userlocation").val()
-            getmap(location)
-        })
-
-        function getmap(location) {
-            $("#cityname").html("Starbucks at Location: " + location.toUpperCase()) 
-            $.ajax({
-                    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=starbucks+in+" +
-                        location + "&key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og",
-                    method: "GET"
-
-                })
-                .then(function (results) {
-                    $("tbody").empty();
-                    console.log("API Results", results.results);
-                    for (i = 0; i < 10; i++) {
-                        var location = results.results[i].formatted_address;
-                        var rating = results.results[i].rating;
-                        console.log("location", location);
-                        console.log("rating", rating);
-                        $("tbody").append("<tr><td>" + location + "</td><td>" + rating + "</td></tr>")
-                    }
-
-                    renderOnMap(results.results);
-                })
-
-        }
-
-        function renderOnMap(array) {
-            var map = new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 12,
-                    center: {
-                        lat: array[0].geometry.location.lat,
-                        lng: array[0].geometry.location.lng
-                    }
-                });
-
-            array.forEach(element => {
-                var marker = new google.maps.Marker({
-                    position: {
-                        lat: element.geometry.location.lat,
-                        lng: element.geometry.location.lng
-                    },
-                    map: map
-                });
-            });
-
-        }
-        getmap("Washington, DC")
-    </script>
+    <script type="text/javascript" src="js/location.js"></script>
+  </div>
 </body>
 
 </html>

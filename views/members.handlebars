@@ -1,76 +1,73 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Coffee Express</h1>
+    <h2 class="welcome">Welcome <span class="member-name"></span></h2>
+    <hr>
+    <a href="/"><button class="btn btn-danger btn-sm">Home</button></a>
+    <a href="/reviews"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span> View AllRating</button></a>
+    <a href="/login"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span> Review Coffee</button></a>
+    <a href="/signup"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span>SignUp</button></a>
+    <a href="/login"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Login</button></a>
+    <a href="/logout"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Logout</button></a>
+  </div>
 
-
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Coffee Express</h1>
-      <h2>Welcome <span class="member-name"></span></h2>
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-      <hr>
-      <a><button id= "addNew" class="btn btn-danger btn-lg"><span class=""></span> Add New
-          </button></a>
-      <a href="/reviews"><button id="allRating" class="btn btn-danger btn-lg"><span
-            class=""></span> View All Rating</button></a>
-    </div>
-
-    <div id="ratingCards" class="card-group">
-
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <form class="review">
-          <select class="custom-select" id="category">
-          {{#each categories}}
-            <option value="{{this.id}}">{{this.name}}</option>
-          {{/each}}
-          </select>
-          <select class="custom-select" id="coffeeName">
-          {{#each coffeeNames}}
-            <option value="{{this.id}}">{{this.name}}</option>
-          {{/each}}
-          </select>
-              <div class="form-group" id="drinkCatDropDown">
-            {{!-- <select class="custom-select" id="category">
-              <option selected value="" id="category">Select Coffee Category</option>
-              <option value="Cold Coffee">Hot Coffee</option>
-              <option value="Hot Coffee">Iced Coffee</option>
-              <option value="Esspereso">Espresso</option>
-              <option value="Esspereso">Frappuccino</option>
-              <option value="Esspereso">Macchiato</option>
-            </select> --}}
-            </div>
-          <div class="form-group">
-            <label class="custom-select">
-              <input class="form-control" id="kindOfCoffee" placeholder="Name of the Coffee">
-            </label>
-          </div>
-          <div class="form-group">
-            <label for="rating-input">Rating:</label>
-            <select class="custom-select" id="rating-input">
-              <option selected value="5">5</option>
-              <option value="4">4</option>
-              <option value="3">3</option>
-              <option value="2">2</option>
-              <option value="1">1</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <br />
-            <label for="body">Coffee Review:</label>
-            <textarea class="form-control" rows="10" id="main-review"></textarea>
-            <br />
-            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>  
-          </div>
-
-        </form>
-      </div>     
-    </div>
+  <div id="ratingCards" class="card-group">
 
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <form class="review">
+        <div class="form-group">
+          <label for="category">Select Category</label>
+          <select class="custom-select" id="category">
+            {{#each categories}}
+            <option value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Select Coffee Name</label>
+          <select class="custom-select" id="coffeeName">
+            {{#each coffeeNames}}
+            <option value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
+
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="rating-input">Rating:</label>
+          <select class="custom-select" id="rating-input">
+            <option selected value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <br />
+          <label for="body">Coffee Review:</label>
+          <textarea class="form-control" rows="10" id="main-review"></textarea>
+          <br />
+          <button type="submit" class="btn btn-danger submit btn-sm">Submit</button>
+        </div>
+
+      </form>
+    </div>
+      </div>     
+    </div>
+      </div>     
+    </div>
+      </div>     
+    </div>
+  </div>
+
+</div>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-  <!--script type="text/javascript" src="js/review.js"></script-->
+ 
 
 

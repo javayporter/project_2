@@ -32,7 +32,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  app.get("/survey",function(req,res){
+  app.get("/servey",function(req,res){
     res.sendFile(path.join(__dirname, "../public/location.html"));
   });
 
@@ -41,7 +41,7 @@ module.exports = function(app) {
       include: [db.Category, db.Coffee, db.User]
     });
     let reviews = reviewData.map(function(item) {
-      return { id: item.id, rating: item.rating, coffeeReview: item.coffeeReview, categoryName: item.Category.name, coffeeName: item.Coffee.name };
+      return { id: item.id, firstName: item.User.firstName, createdAt: item.Category.createdAt, rating: item.rating, coffeeReview: item.coffeeReview, categoryName: item.Category.name, coffeeName: item.Coffee.name };
     });
 
     res.render("reviews", { reviews: reviews });
