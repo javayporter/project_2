@@ -60,6 +60,7 @@ module.exports = function(app) {
       return { id: item.id, name: item.name };
     });
     res.render("members", {
+        isLoggedIn: req.user ? true : false,
         categories: categories,
         coffeeNames: coffeeNames,
     });
