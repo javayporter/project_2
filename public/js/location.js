@@ -5,7 +5,7 @@ $(document).ready(function () {
     })
 
     function getmap(location) {
-        // $("#cityname").html("Starbucks at Location: " + location.toUpperCase())
+        $("#cityname").html("Starbucks at Location: " + location.toUpperCase())
         $.ajax({
             url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=starbucks+in+" +
                 location + "&key=AIzaSyAriXxPMt_ogYg9aHln6QbvoT0FZxW0_og",

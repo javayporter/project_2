@@ -3,13 +3,13 @@
     <h1>Coffee Express</h1>
     <hr>
     <a href="/"><button class="btn btn-danger btn-sm">
-        <span></span>Home
+        <span></span>Reviews
       </button></a>
     <a><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span> View All Rating</button></a>
     <a href="/login"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span> Review Coffee</button></a>
     <a href="/signup"><button id="allRating" class="btn btn-danger btn-sm"><span class=""></span>SignUp</button></a>
     <a href="/login"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Login</button></a>
-    <a href="/location"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Search Location</button></a>
+    <a href="/servey"><button class="btn btn-danger btn-sm"><span class="fa fa-plus"></span>Search Location</button></a>
   </div>
 
   {{#each reviews}}
@@ -34,9 +34,9 @@
             {{this.coffeeReview}}
           </p>
           <p class='card-text'><small class='text-muted'>Last updated by: <span>
-                review.User.firstName,
+                {{this.firstName}}
                 <br>
-                review.updatedAt,
+                {{this.createdAt}}
               </span></small></p>
         </div>
       </div>

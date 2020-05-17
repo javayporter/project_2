@@ -2,17 +2,20 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-h2 {
+.welcome,.member-name {
   color: antiquewhite;
 }
+
 .jumbotron {
   background-image: url("/assets/img/macchiato.jpg");
-  /* background-size: cover; */
+  color: antiquewhite;
   border-radius: 20px;
 }
 #map {
+  margin: 20px;
   height: 500px;
   width: 500px;
+  border-radius: 20px;
 }
 
 .card {
