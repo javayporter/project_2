@@ -23,8 +23,6 @@ $(document).ready(function() {
       return;
     }
 
-    category.val(""),
-    coffeeName.val(""),
     ratingInput.val(""),
     mainReview.val("");
     // eslint-disable-next-line no-use-before-define

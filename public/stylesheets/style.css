@@ -35,6 +35,9 @@ form.login {
   margin-left: 10px;
 }
 
+.form-control {
+  border-radius: 20px;
+}
 
 @media screen and (max-width:768px) {
   .card {
@@ -44,6 +47,13 @@ form.login {
     margin: 20px;
     width: 40%;
     height: 40%;
+  }
+  .btn {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin: 20px;
   }
 
 }
