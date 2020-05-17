@@ -41,7 +41,7 @@ module.exports = function(app) {
       include: [db.Category, db.Coffee, db.User]
     });
     let reviews = reviewData.map(function(item) {
-      return { id: item.id, firstName: item.User.firstName, createdAt: item.Category.createdAt, rating: item.rating, coffeeReview: item.coffeeReview, categoryName: item.Category.name, coffeeName: item.Coffee.name };
+      return { id: item.id, firstName: item.User.firstName, rating: item.rating, coffeeReview: item.coffeeReview, categoryName: item.Category.name, coffeeName: item.Coffee.name };
     });
 
     res.render("reviews", { reviews: reviews });
